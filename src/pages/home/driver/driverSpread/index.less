@@ -1,0 +1,124 @@
+@import './../../../../styles/common.less';
+.driver-spread-search {
+  .driver-spread-map {
+    display: flex;
+    .driver-spread-map-data {
+      padding: 0 0 0 10px;
+      h1 {
+        font-weight: 800;
+      }
+      .driver-spread-map-data-driverNum {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+      }
+      .driver-spread-map-data-img {
+        margin: 10px 0;
+        .legendData {
+          width: 110px;
+          height: 27px;
+          line-height: 27px;
+          margin-bottom: 5px;
+        }
+        .legendData:nth-child(1),
+        &.free {
+          background: url('./img/free.png') no-repeat 100% 100%;
+        }
+        .legendData:nth-child(2),
+        &.start {
+          background: url('./img/start.png') no-repeat 100% 100%;
+        }
+        .legendData:nth-child(3),
+        &.arrival {
+          background: url('./img/arrival.png') no-repeat 100% 100%;
+        }
+        .legendData:nth-child(4),
+        &.serviceStart {
+          background: url('./img/service_start.png') no-repeat 100% 100%;
+        }
+        .legendData:nth-child(5),
+        &.offwork {
+          background: url('./img/offwork.png') no-repeat 100% 100%;
+        }
+        .legendData:nth-child(6),
+        &.other {
+          background: url('./img/other.png') no-repeat 100% 100%;
+        }
+      }
+    }
+
+    .driver-spread-map-content {
+      .ant-card-body {
+        height: 100%;
+        padding: 5px;
+      }
+      position: relative;
+      .info-window-card {
+        background: #fff;
+        padding: 0 10px;
+        border-radius: 2px;
+
+        .info-title {
+          position: relative;
+          font-weight: bold;
+          font-size: 18px;
+          padding: 5px 0;
+
+          span {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            padding: 10px;
+            background: url('./img/close.png') no-repeat center center/100% 100%;
+          }
+        }
+        p {
+          display: inline-block;
+          min-width: 70px;
+          color: black;
+          padding: 5px 0;
+        }
+      }
+
+      .merge-map {
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+
+        .show-merge,
+        .hide-merge {
+          display: inline-block;
+          margin: 0 10px;
+          height: 40px;
+          line-height: 40px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .marker-view {
+      width: 26px;
+      height: 26px;
+      background-position: center center;
+      &.free {
+        background: url('./img/free.png') no-repeat 100% 100%;
+      }
+      &.start {
+        background: url('./img/start.png') no-repeat 100% 100%;
+      }
+      &.arrival {
+        background: url('./img/arrival.png') no-repeat 100% 100%;
+      }
+      &.serviceStart {
+        background: url('./img/service_start.png') no-repeat 100% 100%;
+      }
+      &.offwork {
+        background: url('./img/offwork.png') no-repeat 100% 100%;
+      }
+      &.other {
+        background: url('./img/other.png') no-repeat 100% 100%;
+      }
+    }
+  }
+}

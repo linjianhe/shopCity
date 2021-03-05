@@ -1,0 +1,66 @@
+@import "./../../styles/common.less";
+@leftMenuPrefixClass: left-menu;
+.@{leftMenuPrefixClass} {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  bottom: 0;
+  width: 256px;
+  background: #fff;
+  z-index: 10;
+  .transition(left 0.25s @effect);
+  .box-shadow(2px 0 4px 0 rgba(0, 0, 0, 0.1));
+  .opt-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 15px;
+    height: 60px;
+    background: #464e78;
+    .border-radius(20px 0 0 20px);
+    .transform(translateY(-50%));
+    .transition(all 0.25s @effect);
+    outline: none;
+    cursor: pointer;
+    &::after,
+    &::before {
+      position: absolute;
+      top: 23px;
+      left: -1px;
+      .transition(all 0.25s @effect);
+      content: " ";
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-right-color: rgba(255, 255, 255, 0.85);
+    }
+    &::after {
+      top: 23px;
+      left: 0px; //根据实际情况调整
+      border-right-color: #464e78;
+    }
+  }
+  &.collapse {
+    left: -256px;
+    .opt-btn {
+      .border-radius(0 20px 20px 0);
+      right: -10px;
+      &::after,
+      &::before {
+        left: 2px;
+        transform: translate3d(30%, 0, 0) rotate(180deg);
+      }
+      &::after {
+        left: 1px; //根据实际情况调整
+      }
+    }
+  }
+  .left-menu-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+  }
+}

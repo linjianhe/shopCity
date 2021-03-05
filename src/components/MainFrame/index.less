@@ -1,0 +1,14 @@
+@import './../../styles/common.less';
+@mainFramePrefixClass: main-frame;
+.@{mainFramePrefixClass} {
+  position: fixed;
+  top: 64px;
+  left: 256px;
+  bottom: 0;
+  right: 0;
+  background: #f6f7f9;
+  .transition(left .25s @effect);
+  &.collapse {
+    left: 0;
+  }
+}

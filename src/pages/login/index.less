@@ -1,0 +1,38 @@
+.login-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("../../assets/login-bg.png") no-repeat;
+  background-size: 100% 100%;
+  .title {
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+  }
+  .login-form {
+    margin: 0 auto;
+    width: 360px;
+    padding-top: 30px;
+    .login-input {
+      // border-top: 0;
+      // border-right: 0;
+      // border-left: 0;
+      .ant-input {
+        // border-top: 0;
+        // border-right: 0;
+        // border-left: 0;
+        border-radius: 0;
+        outline: none;
+        &:focus {
+          // box-shadow: none;
+        }
+      }
+    }
+    .login-form-button {
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import './../../styles/common.less';
+@tabPagePrefixClass: tab-page;
+.@{tabPagePrefixClass} {
+  & > .ant-tabs {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    padding: 10px;
+  }
+  .ant-tabs-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 40px;
+    padding: 10px;
+  }
+  .ant-tabs-tabpane {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 12px;
+    overflow: auto;
+    // background-color: #ffffff;
+  }
+  .page-content {
+    height: 100%;
+    width: 100%;
+  }
+}
